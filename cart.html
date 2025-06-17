@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="cart-items">
+            <!-- Cart items will be rendered here by JavaScript -->
+        </div>
+
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <a href="checkout.html" class="checkout-btn" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #7a5c43; color: white; text-decoration: none; border-radius: 4px;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

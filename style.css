@@ -1,0 +1,238 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, p {
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+h1 {
+    color: #5a3a22; /* Coffee brown color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #6a4f3a;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Placeholder for Navigation */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center; /* Simple nav alignment */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* General Container */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+/* Product Page (products.html) */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adds space between items */
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px; /* Consistent margin */
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for uniform look */
+    object-fit: cover; /* To maintain aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.product-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #008000; /* Green color for price */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Cart Page (cart.html) */
+#cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+}
+.cart-item h4{
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+    color: #5a3a22;
+}
+.cart-item p {
+    margin: 3px 0;
+}
+
+
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#cart-total {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #5a3a22;
+}
+
+/* Checkout Page (checkout.html) */
+.checkout-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.checkout-container fieldset {
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.checkout-container legend {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #5a3a22;
+    padding: 0 10px; /* Add padding around legend text */
+}
+
+.checkout-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.checkout-container input[type="text"],
+.checkout-container input[type="email"], /* Assuming email might be added */
+.checkout-container input[type="tel"] { /* Assuming phone might be added */
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
+
+.checkout-container .payment-warning { /* Style for the payment warning */
+    color: #d9534f; /* Bootstrap's danger color */
+    font-weight: bold;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+#order-summary-checkout {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+#order-summary-checkout h2 {
+    margin-top:0;
+}
+
+
+/* Button Styling */
+.add-to-cart-btn,
+#place-order-btn {
+    background-color: #7a5c43; /* Darker coffee color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+#place-order-btn:hover {
+    background-color: #5a3a22; /* Even darker on hover */
+}
+
+/* Ensure payment warning on checkout page is styled correctly */
+#payment-form p[style*="color: red"] {
+    color: #d9534f !important; /* Override inline style if necessary, or remove inline style */
+    font-weight: bold;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}

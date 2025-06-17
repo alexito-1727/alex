@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="checkout-container">
+        <section class="customer-info">
+            <fieldset>
+                <legend>Shipping Details</legend>
+                <form id="shipping-form">
+                    <div>
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div>
+                        <label for="postal-code">Postal Code:</label>
+                        <input type="text" id="postal-code" name="postal-code" required>
+                    </div>
+                    <div>
+                        <label for="country">Country:</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+                <form id="payment-form">
+                    <p style="color: red; font-weight: bold;">Note: This is a demo. Do not enter real payment information.</p>
+                    <div>
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+                    <div>
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="order-recap">
+            <h2>Order Summary</h2>
+            <div id="order-summary-checkout">
+                <!-- Order summary will be displayed here by JavaScript -->
+                <p>Your cart details will appear here.</p>
+            </div>
+        </section>
+
+        <button type="submit" form="shipping-form" id="place-order-btn">Place Order</button>
+    </div>
+
+    <script src="script.js" defer></script> <!-- Assuming script.js might be needed later -->
+</body>
+</html>
